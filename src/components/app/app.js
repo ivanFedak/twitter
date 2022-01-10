@@ -16,7 +16,8 @@ class App extends Component{
                 {text: 'Buy a new phone', like: false, star: false, id: 3},
                 {text: 'Buy a new mackBook', like: true, star: false, id: 4},
             ],
-            term: ''
+            term: '',
+            filter: 'all'
         }
         this.maxId = 5;
     }
@@ -76,20 +77,33 @@ class App extends Component{
         this.setState({term: term})
     }
 
+    filter = (data,filter) => {
+        if(filter === 'like'){
+            return data.filter(item => item.like)
+        }
+        if(filter === 'star'){
+            return data.filter(item => item.star)
+        }
+        return data
+    }
+    onUpdateFilter = (filter) => {
+        this.setState({filter: filter})
+    }
+
 
     render(){
-        const {data,term} = this.state;
+        const {data,term,filter} = this.state;
         const posts = data.length;
         const postsLike = data.filter(item => item.like).length;
 
-        const visible = this.searches(data,term)
+        const visible = this.filter(this.searches(data,term),filter);
         return(<>
             <div className="header">
                 <div className="header__container _container">                 
                     <AppInfo posts={posts} postsLike={postsLike}/>
                     <div className="header__panel">
                         <SearchPanel onUpdateSearch={this.onUpdateSearch}/>
-                        <StatusFilter/>
+                        <StatusFilter onUpdateFilter={this.onUpdateFilter} filter={filter}/>
                     </div>
                 </div>
             </div>

@@ -18,31 +18,47 @@
 
         line-height: calc(35px/30px * 100%)
         @include adaptiv-value('font-size', 30, 18, 1)
-        &_all
-            flex: 0 1 45%
-            color: #FFFFFF
-            border-radius: 4px 0px 0px 4px
-            background: none
+
+
+        background: #6C757D
+        border: 2px solid #6C757D
+        // border-radius: 0px 4px 4px 0px
+        color: #fff
+        &._active
+            color: #fff
+            background: #14A2B8
             border: 2px solid #14A2BB
-            color: #14A2B8
-            &._active
+        @media (any-hover: hover )
+            &:hover
+                border: 2px solid #14A2BB
                 color: #fff
-                background: #14A2B8
-            @media (any-hover: hover )
-                &:hover
-                    color: #fff
-                    background: #14A2B8
-                  
-        &_like
-            color: #6C757D
-            border: 2px solid #6C757D
-            border-radius: 0px 4px 4px 0px
-            background: none
-            &._active
-                background: #6C757D
-                color: #fff
-            @media (any-hover: hover )
-               &:hover
-                    background: #6C757D
-                    color: #fff
+                background: rgba(20, 162, 184, 1)       
+        // &_all
+        //     flex: 0 1 45%
+        //     color: #FFFFFF
+        //     border-radius: 4px 0px 0px 4px
+        //     background: none
+        //     border: 2px solid #14A2BB
+        //     color: #14A2B8
+        //     &._active
+        //         color: #fff
+        //         background: #14A2B8
+        //         border: 2px solid #14A2BB
+        //     @media (any-hover: hover )
+        //         &:hover
+        //             border: 2px solid #14A2BB
+        //             color: #fff
+        //             background: rgba(20, 162, 184, 0.7)       
+        // &_like
+        //     color: #6C757D
+        //     border: 2px solid #6C757D
+        //     border-radius: 0px 4px 4px 0px
+        //     background: none
+        //     &._active
+        //         background: #6C757D
+        //         color: #fff
+        //     @media (any-hover: hover )
+        //        &:hover
+        //             background: #6C757D
+        //             color: #fff
                   
