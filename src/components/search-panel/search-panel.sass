@@ -1,0 +1,17 @@
+@import '../../sass/variables'
+
+.searchPanel
+    flex: 1 1 auto
+    &__input
+        height: 100%
+        width: 100%
+        padding: 13px
+        background: #FFFFFF
+        border-radius: 4px
+        color: rgba(73, 80, 87, 1)
+        @include adaptiv-value('font-size',25,18,1)
+        &::placeholder
+            color: rgba(73, 80, 87, 0.50)
+    @media (min-width: $md3 + px)//More 768   
+        &:not(:last-child)
+            margin-right: 13px

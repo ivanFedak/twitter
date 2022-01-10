@@ -1,0 +1,47 @@
+@import '../../sass/variables'
+
+.item
+    background: #FFFFFF
+    border: 2px solid #CED4DA
+    border-radius: 7px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include adaptiv-value('padding', 20, 10, 1)
+    &__text
+        flex: 1 1 100%
+        cursor: pointer
+        line-height: calc(41px/35px * 100%)
+        color: #000000
+        @include adaptiv-value('font-size', 30, 22, 1)
+    &__options
+        display: flex
+        align-items: center
+        gap: 11px
+    &__btn
+        @include adaptiv-value('width', 50, 30, 1)
+        @include adaptiv-value('height', 50, 30, 1)
+        background: #EEEFEE
+        border-radius: 4px
+        transition: all 0.3s ease 0s
+        i   
+            @include adaptiv-value('font-size', 28, 15, 1)
+        &_star
+            i
+                color: #AEAEAE
+            .star &
+                i
+                    color: #FFD700
+        &_trash
+            i
+                color: #FE0100
+    &__heart
+        padding-left: 15px
+        @include adaptiv-value('font-size', 25, 15, 1)
+        color: #FF0000
+        transition: all 0.3s ease 0s
+        transform: translateX(30px)
+        opacity: 0
+        .like &
+            opacity: 1
+            transform: translateX(0px)

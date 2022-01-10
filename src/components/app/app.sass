@@ -1,0 +1,40 @@
+@import '../../sass/variables'
+  
+.header
+    &__panel
+        padding-top: 35px
+        display: flex
+        @media (max-width: $md3 + px) //Less 768
+            flex-direction: column
+
+
+
+
+
+
+
+
+
+
+
+
+
+._container
+    max-width: $maxWidthContainer + px
+    padding: 0 15px
+    margin: 0 auto
+    @media (max-width: $md3 + px) //Less 768
+       padding: 0 10px
+
+.wrapper
+    min-height: 100%
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    background-color: #EBF5FB
+    @include adaptiv-value('padding-top', 115, 60, 1)
+    @include adaptiv-value('padding-bottom', 115, 60, 1)
+
+.page 
+    flex: 1 1 auto
+

@@ -1,0 +1,21 @@
+@import '../../sass/variables'
+
+.appInfo
+    display: flex
+    justify-content: space-between
+    @media (max-width: $md3 + px) //Less 768
+        flex-direction: column
+    &__container
+    &__body
+    &__user
+        font-weight: 500
+        line-height: 35px
+        color: #000000
+        line-height: calc(35px/30px * 100%)
+        @include adaptiv-value('font-size', 30, 20, 1)
+    &__counter
+        color: #808080
+        line-height: calc(35px/30px * 100%)
+        @include adaptiv-value('font-size', 30, 20, 1)
+        @media (max-width: $md3 + px) //Less 768
+           margin-top: 5px
